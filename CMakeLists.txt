@@ -1,0 +1,10 @@
+
+cmake_minimum_required(VERSION 3.20)
+project(convolvecpp)
+set(CMAKE_CXX_STANDARD 23)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+file(GLOB SOURCES "src/*.cpp")
+add_executable(convolvecpp ${SOURCES})
+target_link_libraries(convolecpp ${OpenCV_LIBS})
